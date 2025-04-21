@@ -1,0 +1,140 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+ 
+@layer base {
+  :root {
+    --background: 232 47% 4%;
+    --foreground: 210 20% 98%;
+    
+    --primary: 199 95% 74%;
+    --primary-foreground: 210 20% 98%;
+ 
+    --secondary: 232 47% 6%;
+    --secondary-foreground: 210 20% 98%;
+ 
+    --muted: 232 47% 8%;
+    --muted-foreground: 215 20% 65%;
+ 
+    --accent: 262 83% 74%;
+    --accent-foreground: 210 20% 98%;
+ 
+    --popover: 232 47% 6%;
+    --popover-foreground: 210 20% 98%;
+ 
+    --border: 199 95% 74%;
+    --input: 232 47% 8%;
+    --ring: 199 95% 74%;
+ 
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border/10;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+    background: radial-gradient(circle at 50% -20%, hsl(232 47% 8%), transparent 70vw),
+                radial-gradient(circle at 0% 100%, hsl(262 83% 8% / 0.3), transparent 40vw),
+                radial-gradient(circle at 100% 100%, hsl(199 95% 8% / 0.3), transparent 40vw),
+                hsl(232 47% 4%);
+    min-height: 100vh;
+  }
+}
+
+.glass {
+  @apply bg-secondary/30 backdrop-blur-lg border border-primary/5;
+  box-shadow: 0 0 30px hsl(var(--primary) / 0.03);
+}
+
+.mail-list {
+  @apply h-[calc(100vh-16rem)] overflow-y-auto;
+}
+
+.mail-item {
+  @apply glass rounded-lg mb-4 overflow-hidden transition-all duration-200 hover:bg-secondary/40;
+}
+
+.mail-item.expanded {
+  @apply ring-1 ring-primary/20;
+  box-shadow: 0 0 20px hsl(var(--primary) / 0.05);
+}
+
+.mail-content {
+  @apply border-t border-primary/5 p-4 bg-secondary/20;
+}
+
+.gradient-text {
+  @apply bg-gradient-to-r from-[hsl(199,95%,74%)] to-[hsl(262,83%,74%)] bg-clip-text text-transparent;
+  text-shadow: 0 0 30px hsla(199, 95%, 74%, 0.2);
+}
+
+.input-wrapper {
+  @apply glass rounded-lg flex items-center overflow-hidden focus-within:ring-1 focus-within:ring-primary/20;
+  box-shadow: 0 0 20px hsl(var(--primary) / 0.05);
+}
+
+.email-input {
+  @apply bg-transparent border-0 focus:outline-none focus:ring-0 w-full p-3 text-sm font-mono;
+}
+
+.domain-selector {
+  @apply bg-muted px-3 py-2 text-sm font-mono text-foreground whitespace-nowrap cursor-pointer;
+}
+
+.dropdown-content {
+  @apply fixed mt-2 w-[200px] rounded-md bg-popover p-1 shadow-lg ring-1 ring-primary/5;
+  box-shadow: 0 0 20px hsl(var(--primary) / 0.05);
+}
+
+.dropdown-item {
+  @apply relative flex w-full cursor-pointer select-none items-center rounded-sm px-2 py-1.5 text-sm outline-none transition-colors hover:bg-primary/10 hover:text-primary-foreground;
+}
+
+.button-group {
+  @apply flex gap-2 flex-wrap;
+}
+
+.cyber-button {
+  @apply glass px-4 py-2 rounded-lg flex items-center gap-2 transition-all duration-200 
+         hover:bg-primary/5 hover:ring-1 hover:ring-primary/20 text-sm font-medium;
+  box-shadow: 0 0 20px hsl(var(--primary) / 0.05);
+}
+
+.cyber-button:hover {
+  box-shadow: 0 0 25px hsl(var(--primary) / 0.08);
+}
+
+.cyber-button.primary {
+  @apply bg-primary/10 text-primary hover:bg-primary/15;
+}
+
+.cyber-button.generate {
+  @apply bg-accent/10 text-accent hover:bg-accent/15;
+  box-shadow: 0 0 20px hsl(var(--accent) / 0.05);
+}
+
+.cyber-button.generate:hover {
+  box-shadow: 0 0 25px hsl(var(--accent) / 0.08);
+}
+
+.refresh-button {
+  @apply glass px-2 py-1 rounded-md flex items-center gap-1 text-xs transition-all duration-200 
+         hover:bg-primary/10 text-primary;
+}
+
+.refresh-button.loading .refresh-icon {
+  @apply animate-spin;
+}
+
+@keyframes neon-pulse {
+  0%, 100% { opacity: 0.85; }
+  50% { opacity: 1; }
+}
+
+.neon-effect {
+  animation: neon-pulse 3s ease-in-out infinite;
+}
