@@ -1,4 +1,6 @@
-# 📬 mails.cybervilla.xyz
+# [📬 TempMail](https://mails.cybervilla.xyz)
+
+![Preview Image](https://i.ibb.co/rfZwChXD/image.png)
 
 Free & open-source temp mail service. Receive emails at `@mails.cybervilla.xyz` and view them via web or API.
 
