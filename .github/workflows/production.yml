@@ -6,7 +6,7 @@ on:
       - main 
 
 jobs:
-  mark-deploy:
+  production:
     runs-on: ubuntu-latest
     environment:
       name: production
@@ -14,7 +14,7 @@ jobs:
 
     steps:
       - name: Tempmails
-        uses: actions/mail@v1
+        uses: actions/checkout@v3
 
       - name: Production
         run: echo "Deployed Locally"
