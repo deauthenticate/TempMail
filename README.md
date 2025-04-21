@@ -10,7 +10,7 @@ Free & open-source temp mail service. Receive emails at `@mails.cybervilla.xyz` 
    `randomname@mailsv2.cybervilla.xyz`
 
 2. View it on web:  
-   `https://mails.cybervilla.xyz/randomname@mailsv2.cybervilla.xyz`
+   `https://mails.cybervilla.xyz`
 
 3. Or via API:  
    `https://mails-api.cybervilla.xyz/mails/randomname_at_mailsv2.cybervilla.xyz`
