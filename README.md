@@ -7,13 +7,13 @@ Free & open-source temp mail service. Receive emails at `@mails.cybervilla.xyz` 
 ## 🔧 How it works
 
 1. Send mail to any address like:  
-   `randomname@mails.cybervilla.xyz`
+   `randomname@mailsv2.cybervilla.xyz`
 
 2. View it on web:  
-   `https://mails.cybervilla.xyz/randomname@mails.cybervilla.xyz`
+   `https://mails.cybervilla.xyz/randomname@mailsv2.cybervilla.xyz`
 
 3. Or via API:  
-   `https://mails-api.cybervilla.xyz/mails/randomname_at_mails.cybervilla.xyz`
+   `https://mails-api.cybervilla.xyz/mails/randomname_at_mailsv2.cybervilla.xyz`
 
 ---
 
