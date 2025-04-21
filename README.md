@@ -13,7 +13,7 @@ Free & open-source temp mail service. Receive emails at `@mails.cybervilla.xyz` 
    `https://mails.cybervilla.xyz/randomname@mails.cybervilla.xyz`
 
 3. Or via API:  
-   `https://api.mails.cybervilla.xyz/mails/randomname_at_mails.cybervilla.xyz`
+   `https://mails-api..cybervilla.xyz/mails/randomname_at_mails.cybervilla.xyz`
 
 ---
 
